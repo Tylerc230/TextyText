@@ -1,25 +1,24 @@
 import SwiftUI
 extension Text: ExpressibleByStringInterpolation {
+    public struct StringInterpolation: StringInterpolationProtocol {
+        var output = Text("")
+
+        public init(literalCapacity: Int, interpolationCount: Int) { }
+
+        public mutating func appendLiteral(_ literal: String) {
+            output = output + Text(literal)
+        }
+
+        public mutating func appendInterpolation(message: String, color: Color) {
+            output = output + Text(message).foregroundColor(color)
+        }
+    }
 
     public init(stringLiteral value: String) {
-        self = Text(value)
+        self.init(value)
     }
-    
-    init(textInterpolation: TextInterpolation) {
-        self = textInterpolation.output
+
+    public init(stringInterpolation: StringInterpolation) {
+        self = stringInterpolation.output
     }
 }
-
-struct TextInterpolation: StringInterpolationProtocol {
-    var output = Text("")
-    init(literalCapacity: Int, interpolationCount: Int) { }
-    
-    mutating func appendLiteral(_ literal: String) {
-        output = output + Text(literal)
-    }
-    
-    mutating func appendInterpolation(_ text: String, color: Color) {
-        output = output + Text(text).foregroundColor(color)
-    }
-}
-

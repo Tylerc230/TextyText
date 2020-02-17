@@ -13,6 +13,7 @@
 		2F96F40C23FB07C7002C8E48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F96F40B23FB07C7002C8E48 /* Assets.xcassets */; };
 		2F96F40F23FB07C7002C8E48 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F96F40E23FB07C7002C8E48 /* Preview Assets.xcassets */; };
 		2F96F41223FB07C7002C8E48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F96F41023FB07C7002C8E48 /* LaunchScreen.storyboard */; };
+		2FD8958123FB0C6700987AF6 /* TextyText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD8958023FB0C6700987AF6 /* TextyText.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		2F96F40E23FB07C7002C8E48 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2F96F41123FB07C7002C8E48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2F96F41323FB07C7002C8E48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2FD8958023FB0C6700987AF6 /* TextyText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextyText.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		2F96F40423FB07C7002C8E48 /* iOS-Project */ = {
 			isa = PBXGroup;
 			children = (
+				2FD8957F23FB0C6700987AF6 /* TextyText */,
 				2F96F40523FB07C7002C8E48 /* AppDelegate.swift */,
 				2F96F40723FB07C7002C8E48 /* SceneDelegate.swift */,
 				2F96F40923FB07C7002C8E48 /* ContentView.swift */,
@@ -73,6 +76,15 @@
 				2F96F40E23FB07C7002C8E48 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2FD8957F23FB0C6700987AF6 /* TextyText */ = {
+			isa = PBXGroup;
+			children = (
+				2FD8958023FB0C6700987AF6 /* TextyText.swift */,
+			);
+			name = TextyText;
+			path = ../../Sources/TextyText;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F96F40623FB07C7002C8E48 /* AppDelegate.swift in Sources */,
+				2FD8958123FB0C6700987AF6 /* TextyText.swift in Sources */,
 				2F96F40823FB07C7002C8E48 /* SceneDelegate.swift in Sources */,
 				2F96F40A23FB07C7002C8E48 /* ContentView.swift in Sources */,
 			);
