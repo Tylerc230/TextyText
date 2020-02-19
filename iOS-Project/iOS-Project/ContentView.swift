@@ -12,9 +12,16 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Text("Normal String")
-            Text("Hi, I'm \(message:"red", color: .red)")
+            Text("Hi, I'm \("red", color: .red)")
+            Text("Now I'm \("blue", blueItalic(_:))")
         }
     }
+}
+
+func blueItalic(_ text: Text) -> Text {
+    text
+        .foregroundColor(.blue)
+        .italic()
 }
 
 struct ContentView_Previews: PreviewProvider {

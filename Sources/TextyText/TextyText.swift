@@ -9,8 +9,12 @@ extension Text: ExpressibleByStringInterpolation {
             output = output + Text(literal)
         }
 
-        public mutating func appendInterpolation(message: String, color: Color) {
+        public mutating func appendInterpolation(_ message: String, color: Color) {
             output = output + Text(message).foregroundColor(color)
+        }
+        
+        public mutating func appendInterpolation(_ message: String, _ transform: (Text) -> Text) {
+            output = output + transform(Text(message))
         }
     }
 
