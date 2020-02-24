@@ -13,6 +13,8 @@ struct ContentView: View {
         VStack {
             Text("Normal String")
             Text("Hi, I'm \("red", color: .red)")
+            Text("Hi, I'm \("bold", bold: true)")
+            Text("I'm a \("title", font: .title) text")
             Text("Now I'm \("blue", blueItalic(_:))")
         }
     }
