@@ -9,13 +9,23 @@ extension Text: ExpressibleByStringInterpolation {
             output += Text(literal)
         }
 
-        public mutating func appendInterpolation(_ message: String, color: Color? = nil, font: Font? = nil) {
+        public mutating func appendInterpolation(_ message: String, color: Color? = nil, font: Font? = nil, fontWeight: Font.Weight? = nil, bold: Bool = false, italic: Bool = false) {
             let text = Text(message)
             if let color = color {
                 output += text.foregroundColor(color)
             }
             if let font = font {
                 output += text.font(font)
+            }
+            if let fontWeight = fontWeight {
+                output += text.fontWeight(fontWeight)
+            }
+            if bold {
+                output += text.bold()
+            }
+            
+            if italic {
+                output += text.italic()
             }
         }
         
